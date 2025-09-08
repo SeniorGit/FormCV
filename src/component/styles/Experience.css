@@ -1,0 +1,32 @@
+.Experience{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.ExperieceForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.ExperiDate{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.Worked label {
+  display: flex;          
+  align-items: center;    
+  gap: 10px;              
+  cursor: pointer;
+}
+
+
+.Worked {
+  margin: 10px 0;         
+}
+
+

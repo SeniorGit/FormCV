@@ -1,0 +1,116 @@
+/* Paper.css */
+.A4Paper {
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 2cm;
+  height: fit-content; /* ← Shrink to content height */
+  max-height: 1200px; /* ← Set maximum height */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+/* Desktop */
+@media (min-width: 1024px) {
+  .A4Paper {
+    max-width: 800px; /* CV paper size */
+    min-height: 847px; /* A4 height ratio */
+    height: auto;
+    max-height: none;
+  }
+}
+
+.Name{
+    display: flex;
+    gap: 5px;
+    justify-content: center; 
+}
+
+.Name h1 {
+    font-size: 32px;
+    font-weight:600;
+    margin: 0; 
+    padding: 0; 
+    line-height: 1cm;
+}
+
+.PPersonal{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.PProfile{
+    margin: 0; 
+    padding: 0;
+    line-height: 0.5cm;
+}
+
+.A4Paper h2 {
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    font-weight:600;
+    margin: 0; 
+    padding: 0;
+    line-height: 0.8cm;
+}
+.A4Paper p {
+    font-size: 14px;
+    margin: 0; 
+    padding: 0;
+    line-height: 0.5cm;
+}
+.A4Paper h3 {
+    font-size: 16px;
+    font-weight:600;
+    margin: 0; 
+    padding: 0;
+    line-height: 0.5cm;
+}
+
+.PExperience h3{
+    margin: 0; 
+    padding: 0;
+    line-height: 0.6cm;
+}   
+
+.PexperienceHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.PexDate{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.Pdesk{
+    padding-left: 15px;
+}
+.PEduHead{
+    display: flex;
+    justify-content: space-between;
+}
+.PeduDate{
+    display: flex;
+    gap: 5px;
+}
+.DetailPersonal{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.PSerHead{
+    display: flex;
+    justify-content: space-between;
+}
+
+.PSerDate{
+    display: flex;
+    gap: 5px;
+}

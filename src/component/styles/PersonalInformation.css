@@ -1,0 +1,15 @@
+.PersonalInformation{
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.Name,
+.contact,
+.Phorto
+{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+

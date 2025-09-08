@@ -1,0 +1,19 @@
+.Education{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 20px;
+}
+.EducationForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.EducationName,
+.edutDate{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+}
