@@ -1,10 +1,23 @@
-import "./styles/Certificate.css"
+
+import "../styles/Certificate.css"
+
 export function Certificate({currentData, onUpdate}){
     const handleChange = (index, field, value) => {
         const updateCertificate = [...currentData];
         updateCertificate[index][field] = value;
         onUpdate(updateCertificate)
     }
+    const addNewCertificate = () => {
+        const newCertificate = {
+            id: Date.now(),
+            CName: '',
+            Organization: '',
+            DPublish: '',
+            DEnd: '',
+            Description: ''
+        };
+        onUpdate([...currentData, newCertificate]);
+    };
     return(
         <div className="Certificate">
             <div className="CertificateHeader">
@@ -49,6 +62,9 @@ export function Certificate({currentData, onUpdate}){
                 </form> 
                 </div>
             ))}
+            <button type="button" className="add-certificate-btn" onClick={addNewCertificate}>
+                + Add Certificate
+            </button>
         </div>
     )
 }

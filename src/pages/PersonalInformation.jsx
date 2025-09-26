@@ -1,4 +1,4 @@
-import "./styles/PersonalInformation.css";
+import "../styles/PersonalInformation.css";
 export function PersonalInformation({currentData, onUpdate}){
     const safeData = currentData || {};
     const handleChange = (e) => {

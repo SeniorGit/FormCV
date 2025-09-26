@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import { PersonalInformation } from './component/PersonalInformation'
-import { Paper } from './component/Paper'
-import { Profile } from './component/Profil'
-import { Experience } from './component/Experience'
-import { Certificate } from './component/certificate'
-import { Education } from './component/Education'
-import { Skills } from './component/Skill'
+import { PersonalInformation } from './pages/PersonalInformation'
+import { Paper } from './pages/Paper'
+import { Profile } from './pages/Profil'
+import { Experience } from './pages/Experience'
+import { Certificate } from './pages/certificate'
+import { Education } from './pages/Education'
+import { Skills } from './pages/Skill'
 function App() {
    
     const [CvData, setCvData] = useState({

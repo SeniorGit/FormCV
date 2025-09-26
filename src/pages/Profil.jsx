@@ -1,4 +1,4 @@
-import "./styles/Profile.css";
+import "../styles/Profile.css";
 export function Profile({currentData, onUpdate}){
     const handleChange = (e) => {
         onUpdate({

@@ -1,0 +1,280 @@
+/* Skill.css */
+.Project {
+    border: 2px solid #e2e8f0;
+    border-radius: 25px;
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Project:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e0;
+}
+
+.ProjectHeader h1 {
+    margin-bottom: 0;
+    color: #2d3748;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Skill Form Styling */
+.ProjectForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #edf2f7;
+    border-radius: 15px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.ProjectForm:hover {
+    background: #f7fafc;
+    border-color: #e2e8f0;
+}
+
+/* Label styling */
+.ProjectForm label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #2d3748;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* Input styling */
+.ProjectForm input[type="text"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+    box-sizing: border-box;
+}
+
+.ProjectForm input[type="text"]:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+    background: #ffffff;
+}
+
+.ProjectForm input[type="text"]:hover {
+    border-color: #a0aec0;
+}
+
+/* Required field indicators */
+.ProjectForm label[for]:after {
+    content: " *";
+    color: #e53e3e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Project {
+        padding: 1.5rem;
+        border-radius: 20px;
+        margin: 0 1rem;
+    }
+    
+    .ProjectForm {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Project {
+        padding: 1rem;
+        border-radius: 15px;
+        border-width: 1px;
+    }
+    
+    .ProjectForm input[type="text"] {
+        padding: 0.625rem 0.875rem;
+        font-size: 16px;
+    }
+}
+
+/* Error state styling */
+.ProjectForm input:invalid {
+    border-color: #e53e3e;
+}
+
+.ProjectForm input:invalid:focus {
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+/* Success state styling */
+.ProjectForm input:valid {
+    border-color: #48bb78;
+}
+
+/* Disabled state */
+.ProjectForm input:disabled {
+    background: #edf2f7;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+/* Animation */
+.Project {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Skill Section */
+.skill-category {
+    margin-bottom: 1.5rem;
+}
+
+.skill-category h3 {
+    color: #4a5568;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #4299e1;
+    padding-left: 0.75rem;
+}
+
+.skill-level {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.skill-level label {
+    font-weight: 500;
+    min-width: 80px;
+    margin: 0;
+}
+
+.skill-level-select {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    background: #f7fafc;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: #4299e1;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.remove-tag {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+}
+
+/* Add Skill Button */
+.add-skill-btn {
+    background: #4299e1;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+
+.add-skill-btn:hover {
+    background: #3182ce;
+    transform: translateY(-2px);
+}
+
+.add-skill-btn:active {
+    transform: translateY(0);
+}
+
+/* No skills message */
+.no-skills {
+    text-align: center;
+    color: #718096;
+    font-style: italic;
+    padding: 2rem;
+}
+
+/* Form header */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.form-header h3 {
+    margin: 0;
+    color: #4a5568;
+    font-size: 1.1rem;
+}
+
+.remove-btn {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+    background: #c53030;
+}
+
+/* Skill level selector */
+.skill-level-select {
+    padding: 0.5rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    background: #f7fafc;
+    font-size: 0.9rem;
+}
+
+.skill-level-select:focus {
+    outline: none;
+    border-color: #4299e1;
+}

@@ -1,0 +1,204 @@
+/* Certificate.css */
+.Certificate {
+    border: 2px solid #e2e8f0;
+    border-radius: 25px;
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Certificate:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e0;
+}
+
+.CertificateHeader h1 {
+    margin-bottom: 0;
+    color: #2d3748;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Certificate Form Styling */
+.CertificateForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #edf2f7;
+    border-radius: 15px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.CertificateForm:hover {
+    background: #f7fafc;
+    border-color: #e2e8f0;
+}
+
+/* Label styling */
+.CertificateForm label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #2d3748;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* Input and Textarea styling */
+.CertificateForm input[type="text"],
+.CertificateForm input[type="date"],
+.CertificateForm textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+    box-sizing: border-box;
+}
+
+.CertificateForm input[type="text"]:focus,
+.CertificateForm input[type="date"]:focus,
+.CertificateForm textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+    background: #ffffff;
+}
+
+.CertificateForm input[type="text"]:hover,
+.CertificateForm input[type="date"]:hover,
+.CertificateForm textarea:hover {
+    border-color: #a0aec0;
+}
+
+/* Date inputs container */
+.CertifDate {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.CertifDate > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Textarea specific styling */
+.CertificateForm textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+}
+
+/* Required field indicators */
+.CertificateForm label[for]:after {
+    content: " *";
+    color: #e53e3e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Certificate {
+        padding: 1.5rem;
+        border-radius: 20px;
+        margin: 0 1rem;
+    }
+    
+    .CertificateForm {
+        padding: 1rem;
+    }
+    
+    .CertifDate {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Certificate {
+        padding: 1rem;
+        border-radius: 15px;
+        border-width: 1px;
+    }
+    
+    .CertificateForm input[type="text"],
+    .CertificateForm input[type="date"],
+    .CertificateForm textarea {
+        padding: 0.625rem 0.875rem;
+        font-size: 16px;
+    }
+}
+
+/* Error state styling */
+.CertificateForm input:invalid,
+.CertificateForm textarea:invalid {
+    border-color: #e53e3e;
+}
+
+.CertificateForm input:invalid:focus,
+.CertificateForm textarea:invalid:focus {
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+/* Success state styling */
+.CertificateForm input:valid,
+.CertificateForm textarea:valid {
+    border-color: #48bb78;
+}
+
+/* Disabled state */
+.CertificateForm input:disabled,
+.CertificateForm textarea:disabled {
+    background: #edf2f7;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+/* Animation */
+.Certificate {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add Certificate Button */
+.add-certificate-btn {
+    background: #ff8ba7;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+
+.add-certificate-btn:hover {
+    background: #f76b8b;
+    transform: translateY(-2px);
+}
+
+.add-certificate-btn:active {
+    transform: translateY(0);
+}
+

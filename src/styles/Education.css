@@ -1,0 +1,192 @@
+/* Education.css */
+.Education {
+    border: 2px solid #e2e8f0;
+    border-radius: 25px;
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Education:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e0;
+}
+
+.Education > div:first-child h1 {
+    margin-bottom: 0;
+    color: #2d3748;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Education Form Styling */
+.EducationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #edf2f7;
+    border-radius: 15px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.EducationForm:hover {
+    background: #f7fafc;
+    border-color: #e2e8f0;
+}
+
+/* Label styling */
+.EducationForm label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #2d3748;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* Input styling */
+.EducationForm input[type="text"],
+.EducationForm input[type="date"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+    box-sizing: border-box;
+}
+
+.EducationForm input[type="text"]:focus,
+.EducationForm input[type="date"]:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+    background: #ffffff;
+}
+
+.EducationForm input[type="text"]:hover,
+.EducationForm input[type="date"]:hover {
+    border-color: #a0aec0;
+}
+
+/* Form groups - EducationName and edutDate */
+.EducationName,
+.edutDate {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.EducationName > div,
+.edutDate > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Required field indicators */
+.EducationForm label[for]:after {
+    content: " *";
+    color: #e53e3e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Education {
+        padding: 1.5rem;
+        border-radius: 20px;
+        margin: 0 1rem;
+    }
+    
+    .EducationForm {
+        padding: 1rem;
+    }
+    
+    .EducationName,
+    .edutDate {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Education {
+        padding: 1rem;
+        border-radius: 15px;
+        border-width: 1px;
+    }
+    
+    .EducationForm input[type="text"],
+    .EducationForm input[type="date"] {
+        padding: 0.625rem 0.875rem;
+        font-size: 16px;
+    }
+}
+
+/* Error state styling */
+.EducationForm input:invalid {
+    border-color: #e53e3e;
+}
+
+.EducationForm input:invalid:focus {
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+/* Success state styling */
+.EducationForm input:valid {
+    border-color: #48bb78;
+}
+
+/* Disabled state */
+.EducationForm input:disabled {
+    background: #edf2f7;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+/* Animation */
+.Education {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Add Education Button */
+.add-education-btn {
+    background: #ff8ba7;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+
+.add-education-btn:hover {
+    background: #f76b8b;
+    transform: translateY(-2px);
+}
+
+.add-education-btn:active {
+    transform: translateY(0);
+}

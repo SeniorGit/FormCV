@@ -1,10 +1,21 @@
-import "./styles/Education.css"
+import "../styles/Education.css"
 export function Education({currentData, onUpdate}){
     const handleChange = (index, field, value) => {
         const updateEducation = [...currentData];
         updateEducation[index][field] = value;
         onUpdate(updateEducation)
     }
+    const addNewEducation = () => {
+        const newEducation = {
+            id: Date.now(),
+            LEducation: '',
+            NInstitution: '',
+            Major: '',
+            Start: '',
+            End: ''
+        };
+        onUpdate([...currentData, newEducation]);
+    };
     return(
         <div className="Education">
             <div>
@@ -53,7 +64,9 @@ export function Education({currentData, onUpdate}){
                     </form>
                 </div>
             ))}
-            
+            <button type="button" className="add-education-btn" onClick={addNewEducation}>
+                + Add Another Education
+            </button>
         </div>
     )
 }

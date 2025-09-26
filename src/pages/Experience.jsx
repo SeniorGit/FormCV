@@ -1,4 +1,4 @@
-import "./styles/Experience.css"
+import "../styles/Experience.css"
 export function Experience ({currentData, onUpdate}){
     const handleChange = (index, field, value) => {
         const UpdateExperiences = [...currentData];

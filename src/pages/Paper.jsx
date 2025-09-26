@@ -1,4 +1,4 @@
-import "./styles/Paper.css"
+import "../styles/Paper.css"
 export function Paper({data}){
     return(
         <div className="A4Paper">
@@ -8,11 +8,19 @@ export function Paper({data}){
                     <h1>{data.DataPersonal.Lname}</h1>
                 </div>
                 <div className="DetailPersonal">
-                    <p>{data.DataPersonal.phone}</p>
-                    <p>{data.DataPersonal.Email}</p>
-                    <a href={data.DataPersonal.Linkedin}>Linkedin</a>
-                    <a href={data.DataPersonal.Proto}>Phortofolio</a>
-                    <p>{data.DataPersonal.Address}</p>
+                    <p>{data.DataPersonal?.phone}</p>
+                    <p>{data.DataPersonal?.Email}</p>
+                    {data.DataPersonal?.Linkedin && (
+                        <a href={data.DataPersonal.Linkedin} target="_blank" rel="noopener noreferrer">
+                            LinkedIn
+                        </a>
+                    )}
+                    {data.DataPersonal?.Proto && (
+                        <a href={data.DataPersonal.Proto} target="_blank" rel="noopener noreferrer">
+                            Portfolio
+                        </a>
+                    )}
+                    <p>{data.DataPersonal?.Address}</p>
                 </div>
             </div>
             <div className="PProfile">
@@ -62,7 +70,7 @@ export function Paper({data}){
                 ))}
             </div>
             <div className="PSertificate">
-                <h2>Sertificate</h2>
+                <h2>Certificate</h2>
                 {data.DataCertificate.map((e)=>(
                     <div key={e.id}>
                         <div className="PSerHead">

@@ -1,0 +1,201 @@
+/* Paper.css - Enhanced Version */
+.A4Paper {
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 2cm;
+  min-height: 29.7cm; 
+  height: fit-content;
+  max-height: 1200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Increased gap */
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Georgia', 'Times New Roman', serif; /* Better for CV */
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Name Section Enhancement */
+.Name {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.Name h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* Personal Details Enhancement */
+.DetailPersonal {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.DetailPersonal p, 
+.DetailPersonal a {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.DetailPersonal a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.DetailPersonal a:hover {
+  text-decoration: underline;
+}
+
+/* Section Headers Enhancement */
+.A4Paper h2 {
+  border-bottom: 2px solid #34495e;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  padding: 0 0 8px 0;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.A4Paper h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0;
+  color: #2c3e50;
+}
+
+.A4Paper p {
+  font-size: 14px;
+  margin: 3px 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Experience & Education Items */
+.PexperienceHeader, .PEduHead, .PSerHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.PexDate, .PeduDate, .PSerDate {
+  display: flex;
+  gap: 5px;
+  font-style: italic;
+  color: #7f8c8d;
+  font-size: 13px;
+}
+
+/* Content Sections */
+.PProfile, .PExperience, .PPersonal, .PEducation, .PSertificate, .PSkill {
+  margin: 0;
+  padding: 0;
+}
+
+.Pdesk {
+  padding-left: 20px;
+  margin-top: 8px;
+  border-left: 2px solid #ecf0f1;
+}
+
+/* Skills Section Enhancement */
+.PSkill {
+  display: flex;
+  flex-direction: column;
+}
+
+.PSkill > div {
+  margin-bottom: 8px;
+}
+
+.PSkill h3 {
+  display: inline-block;
+  background: #ecf0f1;
+  padding: 4px 12px;
+  border-radius: 15px;
+  margin: 2px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Print Styles Enhancement */
+@media print {
+  .A4Paper {
+    box-shadow: none;
+    margin: 0;
+    padding: 1.5cm;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    gap: 20px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+  
+  .A4Paper h2 {
+    border-color: #000;
+  }
+  
+  .DetailPersonal a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  /* Ensure good contrast for printing */
+  .A4Paper {
+    color: #000 !important;
+    background: white !important;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .A4Paper {
+    padding: 1cm;
+    gap: 20px;
+  }
+  
+  .Name {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .DetailPersonal {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .PexperienceHeader, .PEduHead, .PSerHead {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .PexDate, .PeduDate, .PSerDate {
+    justify-content: flex-start;
+  }
+}
