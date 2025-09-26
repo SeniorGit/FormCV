@@ -5,13 +5,25 @@ export function Experience ({currentData, onUpdate}){
         UpdateExperiences[index][field] = value;
         onUpdate(UpdateExperiences);
     }
+    const addNewExperience = () => {
+    const newExperience = {
+        id: Date.now(),
+        Position: '',
+        Company: '',
+        SDate: '',
+        EDate: '',
+        Working: false,
+        Description: ''
+    };
+    onUpdate([...currentData, newExperience]);
+};
     return(
         <div className="Experience">
             <div>
                 <h1>Experience</h1>
             </div>
             {currentData.map((experience, index)=>(
-                <div key={experience.id} className="ExperieceForm">
+                <div key={experience.id}>
                     <form className="ExperieceForm" >
 
                         <label htmlFor={`Position-${index}`}>Position</label>
@@ -63,6 +75,9 @@ export function Experience ({currentData, onUpdate}){
                     </form>
                 </div>
             ))}
+            <button type="button" className="add-experience-btn" onClick={addNewExperience}>
+                + Add Another Experience
+            </button>
         </div>
     )
 }

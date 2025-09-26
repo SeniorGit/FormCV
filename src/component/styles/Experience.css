@@ -1,32 +1,243 @@
-.Experience{
-    display: flex;
-    flex-direction: column;
-    border: 2px solid black;
+/* Experience.css */
+.Experience {
+    border: 2px solid #e2e8f0;
     border-radius: 25px;
-    padding: 20px;
-}
-
-.ExperieceForm{
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
-.ExperiDate{
+.Experience:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e0;
+}
+
+.Experience > div:first-child h1 {
+    margin-bottom: 0;
+    color: #2d3748;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Experience Form Styling */
+.ExperieceForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #edf2f7;
+    border-radius: 15px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.ExperieceForm:hover {
+    background: #f7fafc;
+    border-color: #e2e8f0;
+}
+
+/* Label styling */
+.ExperieceForm label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #2d3748;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* Input and Textarea styling */
+.ExperieceForm input[type="text"],
+.ExperieceForm input[type="date"],
+.ExperieceForm textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+    box-sizing: border-box;
+}
+
+.ExperieceForm input[type="text"]:focus,
+.ExperieceForm input[type="date"]:focus,
+.ExperieceForm textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+    background: #ffffff;
+}
+
+.ExperieceForm input[type="text"]:hover,
+.ExperieceForm input[type="date"]:hover,
+.ExperieceForm textarea:hover {
+    border-color: #a0aec0;
+}
+
+/* Date inputs container */
+.ExperiDate {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 1rem;
+}
+
+.ExperiDate > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Checkbox styling */
+.Worked {
+    margin: 0.5rem 0;
 }
 
 .Worked label {
-  display: flex;          
-  align-items: center;    
-  gap: 10px;              
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: #4a5568;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
 }
 
-
-.Worked {
-  margin: 10px 0;         
+.Worked label:hover {
+    background: #edf2f7;
 }
 
+.Worked input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #cbd5e0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
 
+.Worked input[type="checkbox"]:checked {
+    background-color: #4299e1;
+    border-color: #4299e1;
+}
+
+.Worked input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+/* Textarea specific styling */
+.ExperieceForm textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+/* Required field indicators */
+.ExperieceForm label[for]:after {
+    content: " *";
+    color: #e53e3e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Experience {
+        padding: 1.5rem;
+        border-radius: 20px;
+        margin: 0 1rem;
+    }
+    
+    .ExperieceForm {
+        padding: 1rem;
+    }
+    
+    .ExperiDate {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Experience {
+        padding: 1rem;
+        border-radius: 15px;
+        border-width: 1px;
+    }
+    
+    .ExperieceForm input[type="text"],
+    .ExperieceForm input[type="date"],
+    .ExperieceForm textarea {
+        padding: 0.625rem 0.875rem;
+        font-size: 16px;
+    }
+}
+
+/* Error state styling */
+.ExperieceForm input:invalid,
+.ExperieceForm textarea:invalid {
+    border-color: #e53e3e;
+}
+
+.ExperieceForm input:invalid:focus,
+.ExperieceForm textarea:invalid:focus {
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+/* Success state styling */
+.ExperieceForm input:valid,
+.ExperieceForm textarea:valid {
+    border-color: #48bb78;
+}
+
+/* Disabled state */
+.ExperieceForm input:disabled,
+.ExperieceForm textarea:disabled {
+    background: #edf2f7;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+/* Animation */
+.Experience {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add Experience Button */
+.add-experience-btn {
+    background: #ff8ba7;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+
+.add-experience-btn:hover {
+    background: #f76b8b;
+    transform: translateY(-2px);
+}
+
+.add-experience-btn:active {
+    transform: translateY(0);
+}

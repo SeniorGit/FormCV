@@ -1,7 +1,134 @@
-.Profile{
-    display: flex;
-    border: 2px solid black;
+/* Profile.css */
+.Profile {
+    border: 2px solid #e2e8f0;
     border-radius: 25px;
-    padding: 20px;
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
     flex-direction: column;
+}
+
+.Profile:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e0;
+}
+
+.ProfileHeader h1 {
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Label styling */
+.ProfileForm label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* Textarea styling - matching input style */
+.ProfileForm textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+}
+
+.ProfileForm textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+    background: #ffffff;
+}
+
+.ProfileForm textarea:hover {
+    border-color: #a0aec0;
+}
+
+/* Required field indicator */
+.ProfileForm label[for]:after {
+    content: " *";
+    color: #e53e3e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Profile {
+        padding: 1.5rem;
+        border-radius: 20px;
+        margin: 0 1rem;
+    }
+    
+    .ProfileHeader h1 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Profile {
+        padding: 1rem;
+        border-radius: 15px;
+        border-width: 1px;
+    }
+    
+    .ProfileForm textarea {
+        padding: 0.625rem 0.875rem;
+        font-size: 16px;
+    }
+}
+
+/* Error state styling */
+.ProfileForm textarea:invalid {
+    border-color: #e53e3e;
+}
+
+.ProfileForm textarea:invalid:focus {
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+/* Success state styling */
+.ProfileForm textarea:valid {
+    border-color: #48bb78;
+}
+
+/* Disabled state */
+.ProfileForm textarea:disabled {
+    background: #edf2f7;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+/* Animation */
+.Profile {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Character count indicator */
+.character-count {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #718096;
+    margin-top: 0.5rem;
 }

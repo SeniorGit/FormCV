@@ -1,15 +1,149 @@
-.PersonalInformation{
-    border: 2px solid black;
+.PersonalInformation {
+    border: 2px solid #e2e8f0; 
     border-radius: 25px;
-    padding: 20px;
+    padding: 2rem; 
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+}
+
+.PersonalInformation:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e0; /
 }
 
 .Name,
 .contact,
-.Phorto
-{
+.Phorto {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 1rem; 
+    margin-bottom: 1.5rem; 
 }
 
+
+.Name > div,
+.contact > div,
+.Phorto > div {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+    font-size: 0.9rem;
+}
+
+/* Input styling */
+input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+    background: #ffffff;
+}
+
+input:hover {
+    border-color: #a0aec0;
+}
+
+/* Required field indicators */
+label[for]:after {
+    content: " *";
+    color: #e53e3e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .PersonalInformation {
+        padding: 1.5rem;
+        border-radius: 20px;
+        margin: 0 1rem; 
+    }
+    
+    .Name,
+    .contact,
+    .Phorto {
+        flex-direction: column; 
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+   
+    .Name > div,
+    .contact > div,
+    .Phorto > div {
+        flex: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .PersonalInformation {
+        padding: 1rem;
+        border-radius: 15px;
+        border-width: 1px;
+    }
+    
+    input {
+        padding: 0.625rem 0.875rem;
+        font-size: 16px; 
+    }
+}
+
+/* Error state styling */
+input:invalid {
+    border-color: #e53e3e;
+}
+
+input:invalid:focus {
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+/* Success state styling */
+input:valid {
+    border-color: #48bb78;
+}
+
+/* Disabled state */
+input:disabled {
+    background: #edf2f7;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+/* Section headers */
+.HeaderPersonalInform h1 {
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Optional: Add smooth animation for form sections */
+.PersonalInformation {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

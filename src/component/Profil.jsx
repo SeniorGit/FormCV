@@ -6,6 +6,8 @@ export function Profile({currentData, onUpdate}){
             [e.target.name]: e.target.value
         })
     }
+    const charCount = currentData.Description?.length || 0;
+    const maxChars = 500;
     return(
         <div className="Profile">
             <div className="ProfileHeader">
@@ -20,6 +22,9 @@ export function Profile({currentData, onUpdate}){
                         rows={6}
                         placeholder="Describe your professional background..."
                     />
+                    <div className="character-count">
+                        {charCount}/{maxChars} characters
+                    </div>
                 </form>
             </div>
         </div>

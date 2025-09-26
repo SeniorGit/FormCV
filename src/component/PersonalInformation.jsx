@@ -1,8 +1,9 @@
 import "./styles/PersonalInformation.css";
 export function PersonalInformation({currentData, onUpdate}){
+    const safeData = currentData || {};
     const handleChange = (e) => {
         onUpdate({
-            ...currentData,
+            ...safeData,
             [e.target.name]: e.target.value
         })
     }
